@@ -1,2 +1,3 @@
 # P_OO_320
-Projet sur la programmation orientée objet
+
+Ce projet consiste à réaliser un jeu vidéo en C# est d'apprendre à programmer en orienté objet
