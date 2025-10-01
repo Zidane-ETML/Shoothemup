@@ -22,7 +22,7 @@ namespace MonkeyGame
         {
             _x = movex;
             _y = movey;
-            if (_x == Beach.WIDTH)
+            if (X == Beach.WIDTH)
             {
                 _x = 0;
             }
