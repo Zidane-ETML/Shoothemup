@@ -14,7 +14,7 @@ namespace MonkeyGame
 
             // Création de la flotte de drones
             List<player> fleet= new List<player>();
-            fleet.Add(new player(Beach.WIDTH / 2, Beach.HEIGHT / 2, "Joe"));
+            fleet.Add(new player(Beach.WIDTH / 2, Beach.HEIGHT / 2));
 
             // Démarrage
             Application.Run(new Beach(fleet));

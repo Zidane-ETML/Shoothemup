@@ -42,7 +42,7 @@ namespace MonkeyGame
                         drone.move(10, 0);
                         break;
                     case Keys.Space:
-
+                        drone.Jump();
                         break;
                 }
             }

@@ -10,11 +10,15 @@ namespace MonkeyGame
         private int _x;                                 // Position en X depuis la gauche de l'espace aérien
         private int _y;                                 // Position en Y depuis le haut de l'espace aérien
 
+        private int velocityY = 0;
+        private bool isJumping = false;
+        public int GroundY { get; private set; }
         // Constructeur
-        public player(int X, int Y, string name)
+        public player(int X, int Y)
         {
             x = X;
             y = Y;
+            GroundY = Y;
         }
         public int X { get { return x;} }
         public int Y { get { return y;} }
@@ -28,6 +32,14 @@ namespace MonkeyGame
             }
 
         }
+        public void Jump()
+        {
+            if (!isJumping) // sauter seulement si on est au sol
+            {
+                velocityY = -15; // vitesse initiale (vers le haut)
+                isJumping = true;
+            }
+        }
         public void stopmove(int movex, int movey) 
         {
             _x = 0;
@@ -39,6 +51,15 @@ namespace MonkeyGame
         {
             x += _x;
             y += _y;
+            velocityY += 1;
+            y += velocityY;
+
+            if (y >= GroundY) 
+            {
+                y = GroundY;
+                velocityY = 0;
+                isJumping = false ;
+            }
         }
 
     }
