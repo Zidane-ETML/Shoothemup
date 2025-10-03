@@ -29,35 +29,41 @@ namespace MonkeyGame
             this.KeyDown += Form1_KeyDown;
             this.KeyUp += Form1_KeyUp;
         }
+        
+        
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
-            foreach (player drone in group)
+            foreach (player monkey in group)
             {
                 switch (e.KeyCode)
                 {
                     case Keys.A:
-                        drone.move(-10, 0);
+                        monkey.move(-10, 0);
                         break;
                     case Keys.D:
-                        drone.move(10, 0);
+                        monkey.move(10, 0);
+                        if (monkey.X == 0 || monkey.X == WIDTH)
+                        {
+                            monkey.stopmove();
+                        }
                         break;
                     case Keys.Space:
-                        drone.Jump();
+                        monkey.Jump();
                         break;
                 }
             }
         }
         private void Form1_KeyUp(object sender, KeyEventArgs i)
         {
-            foreach (player drone in group)
+            foreach (player monkey in group)
             {
                 switch (i.KeyCode)
                 {
                     case Keys.A:
-                        drone.stopmove(0, 0);
+                        monkey.stopmove();
                         break;
                     case Keys.D:
-                        drone.stopmove(0, 0);
+                        monkey.stopmove();
                         break;
                 }
             }
@@ -73,9 +79,9 @@ namespace MonkeyGame
             beach.Graphics.DrawImage(beachImg, 0, 0, WIDTH, HEIGHT);
 
             // draw drones
-            foreach (player drone in group)
+            foreach (player monkey in group)
             {
-                drone.Render(beach);
+                monkey.Render(beach);
             }
 
             beach.Render();

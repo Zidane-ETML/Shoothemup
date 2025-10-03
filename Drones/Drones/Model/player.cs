@@ -26,10 +26,7 @@ namespace MonkeyGame
         {
             _x = movex;
             _y = movey;
-            if (X == Beach.WIDTH)
-            {
-                _x = 0;
-            }
+            
 
         }
         public void Jump()
@@ -40,7 +37,7 @@ namespace MonkeyGame
                 isJumping = true;
             }
         }
-        public void stopmove(int movex, int movey) 
+        public void stopmove() 
         {
             _x = 0;
             _y = 0;
