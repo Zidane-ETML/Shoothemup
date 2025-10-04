@@ -1,3 +1,5 @@
+using MonkeyGame.Model;
+
 namespace MonkeyGame
 {
     // La classe AirSpace représente le territoire au dessus duquel les drones peuvent voler
@@ -15,6 +17,8 @@ namespace MonkeyGame
         BufferedGraphicsContext currentContext;
         BufferedGraphics beach;
         // Initialisation de l'espace aérien avec un certain nombre de drones
+        public List<Palm_tree> palm_Trees = new List<Palm_tree>();
+
         public Beach(List<player> group)
         {
             InitializeComponent();
@@ -28,6 +32,11 @@ namespace MonkeyGame
             this.KeyPreview = true; // Ensures the form captures key events before child controls
             this.KeyDown += Form1_KeyDown;
             this.KeyUp += Form1_KeyUp;
+            palm_Trees = new List<Palm_tree>
+            {
+                new Palm_tree(200, 400, 100, 220),
+                new Palm_tree(500, 400, 100, 220)
+            };
         }
         
         
@@ -78,6 +87,11 @@ namespace MonkeyGame
 
             beach.Graphics.DrawImage(beachImg, 0, 0, WIDTH, HEIGHT);
 
+            foreach (Palm_tree palmier in palm_Trees)
+            {
+                palmier.Draw(beach.Graphics);
+            }
+
             // draw drones
             foreach (player monkey in group)
             {
@@ -92,7 +106,7 @@ namespace MonkeyGame
         {
             foreach (player drone in group)
             {
-                drone.Update(interval);
+                drone.Update(interval, palm_Trees);
             }
         }
 

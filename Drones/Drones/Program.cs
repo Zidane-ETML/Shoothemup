@@ -13,11 +13,11 @@ namespace MonkeyGame
             ApplicationConfiguration.Initialize();
 
             // Création de la flotte de drones
-            List<player> fleet= new List<player>();
-            fleet.Add(new player(Beach.WIDTH / 2, Beach.HEIGHT / 2));
+            List<player> group= new List<player>();
+            group.Add(new player(Beach.WIDTH / 2, Beach.HEIGHT / 2, 500, 499));
 
             // Démarrage
-            Application.Run(new Beach(fleet));
+            Application.Run(new Beach(group));
         }
     }
 }
