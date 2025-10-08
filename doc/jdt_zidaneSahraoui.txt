@@ -20,3 +20,9 @@ JOURNAL DE TRAVAIL 01.10.2025
 J'essaie encore de faire en sorte que mon joueur se déplace comme je le veux, 
 les problèmes que j'ai eu sont que le déplacement n'était pas fluide et que quand j'appuyais
 sur les touches de déplacement en même temps le personnage s'arretais sur place. 
+
+JOURNAL DE TRAVAIL 08.10.2025
+13h10 - 13h20 : prendre conscience du feedback -10min DONE
+13h20 - 14h10 : Mettre à jour Visual studio et en même temps avancer dans le rapport et corriger certaines choses dans le jdt -50min DONE
+14h10 - 16h35 : Ajout de hitbox au joueur et essaie d'ajouter les palmiers et une hitbox propre à chaque palmier -2h25 IN PROGRESS
+J'ai vraiment de la difficulté à comprendre mettre en place ces palmiers mais je pense pouvoir réussir avant les 80%.

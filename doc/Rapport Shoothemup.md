@@ -8,3 +8,6 @@ J'ai choisi de faire un jeu où le joueur serait un singe qui bougerait de palmi
 En même temps les gorilles lanceront des noix de coco sur le joueur ce qui lui infligera des dégats sur ses points de vie s'il se fait toucher.
 
 En parralèles nous apprenons à coder en C# en Orienté Objet, ça nous permet de pouvoir 
+
+## Planification
+
