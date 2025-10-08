@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MonkeyGame.Model
 {
-    internal class Gorilla:player
+    internal class Gorilla
     {
     }
 }

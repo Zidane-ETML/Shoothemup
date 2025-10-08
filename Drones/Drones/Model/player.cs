@@ -1,21 +1,24 @@
 ﻿using MonkeyGame.Model;
 using System.Threading;
+using System.Resources;
+using MonkeyGame.Properties;
 namespace MonkeyGame
 {
-    // Cette partie de la classe Drone définit ce qu'est un drone par un modèle numérique
     public partial class player
     {
         private int x;
         private int y;
 
-        private int _x;                                 // Position en X depuis la gauche de l'espace aérien
-        private int _y;                                 // Position en Y depuis le haut de l'espace aérien
+        private int _x;                                 // Position en X
+        private int _y;                                 // Position en Y
 
         private int velocityY = 0;
         private bool isJumping = false;
         public int GroundY { get; private set; }
         public int Width { get; private set; }
         public int Height { get; private set; }
+
+        public Rectangle Hitbox { get;set; }
 
 
         public player(int X, int Y, int width, int height)
@@ -49,39 +52,16 @@ namespace MonkeyGame
             _x = 0;
             _y = 0;
         }
-        public void CheckLanding(List<Palm_tree> palmiers)
-        {
-            foreach (var palmier in palmiers)
-            {
-                Rectangle palmBounds = palmier.GetBounds();
-
-                // Si le joueur tombe et touche le haut du palmier
-                if (velocityY >= 0 &&
-                    X + Width > palmBounds.X &&
-                    X < palmBounds.X + palmBounds.Width &&
-                    Y + Height >= palmBounds.Y &&
-                    Y + Height <= palmBounds.Y + palmBounds.Height)
-                {
-                    // Atterrissage
-                    y = palmBounds.Y - Height;   // Place le joueur sur le palmier
-                    velocityY = 0;
-                    isJumping = false;
-                    GroundY = y;                 // Nouveau "sol"
-                }
-            }
-        }
 
 
         // Cette méthode calcule le nouvel état dans lequel le drone se trouve après
         // que 'interval' millisecondes se sont écoulées
-        public void Update(int interval, List<Palm_tree> palmiers)
+        public void Update(int interval)
         {
             x += _x;
             y += _y;
             velocityY += 1;
             y += velocityY;
-
-            CheckLanding(palmiers);
 
             if (y >= GroundY) 
             {
@@ -89,6 +69,7 @@ namespace MonkeyGame
                 velocityY = 0;
                 isJumping = false ;
             }
+            Hitbox = new Rectangle(x, y, Resources.player.Width/10, Resources.player.Height/10);
         }
 
     }

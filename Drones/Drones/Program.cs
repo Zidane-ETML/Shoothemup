@@ -1,3 +1,5 @@
+using MonkeyGame.Model;
+
 namespace MonkeyGame
 {
     internal static class Program
@@ -14,7 +16,9 @@ namespace MonkeyGame
 
             // Création de la flotte de drones
             List<player> group= new List<player>();
+            List<Palm_Tree> tree= new List<Palm_Tree>();
             group.Add(new player(Beach.WIDTH / 2, Beach.HEIGHT / 2, 500, 499));
+            tree.Add(new Palm_Tree());
 
             // Démarrage
             Application.Run(new Beach(group));

@@ -16,7 +16,7 @@ JOURNAL DE TRAVAIL 03.09.2025
 
 JOURNAL DE TRAVAIL 01.10.2025
 13h10 - 13h20 : Rattrapage checkpoint numéro 4 -10min DONE
-13h20 - 16h35 : Ajout de la capacité de déplacer à mon joueur -3h15 
+13h20 - 16h35 : Ajout de la capacité de déplacer à mon joueur -3h15 IN PROGRESS
 J'essaie encore de faire en sorte que mon joueur se déplace comme je le veux, 
 les problèmes que j'ai eu sont que le déplacement n'était pas fluide et que quand j'appuyais
-sur les touches de déplacement en même temps le personnage s'arretais sur place. IN PROGRESS
+sur les touches de déplacement en même temps le personnage s'arretais sur place. 
