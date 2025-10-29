@@ -18,10 +18,17 @@ namespace MonkeyGame
             List<player> group= new List<player>();
             List<Palm_Tree> tree= new List<Palm_Tree>();
             group.Add(new player(Beach.WIDTH / 2, Beach.HEIGHT / 2, 500, 499));
-            tree.Add(new Palm_Tree());
+            int space = 100;
+            tree.Add(new Palm_Tree(100, GlobalHelpers.alea.Next(0, 2)));
+            for (int i = 0; i < 4; i++)
+            {
+                space = space + GlobalHelpers.alea.Next(120 , 300);
+                tree.Add(new Palm_Tree(100 + space, GlobalHelpers.alea.Next(0, 2)));
+            }
+            
 
             // Démarrage
-            Application.Run(new Beach(group));
+            Application.Run(new Beach(group, tree));
         }
     }
 }

@@ -1,5 +1,4 @@
 using MonkeyGame.Model;
-
 namespace MonkeyGame
 {
     
@@ -17,7 +16,7 @@ namespace MonkeyGame
         BufferedGraphics beach;
    
 
-        public Beach(List<player> group)
+        public Beach(List<player> group, List<Palm_Tree> tree)
         {
             InitializeComponent();
             ClientSize = new Size(WIDTH, HEIGHT);
@@ -26,6 +25,7 @@ namespace MonkeyGame
             
             beach = currentContext.Allocate(this.CreateGraphics(), this.DisplayRectangle);
             this.group = group;
+            this.tree = tree;
             this.KeyPreview = true; // Ensures the form captures key events before child controls
             this.KeyDown += Form1_KeyDown;
             this.KeyUp += Form1_KeyUp;
@@ -75,21 +75,20 @@ namespace MonkeyGame
             private void Render()
         {
 
-            Image beachImg = new Bitmap("..\\Resources\\playa.png");
+            Image beachImg = Properties.Resources.playa;
 
             beach.Graphics.DrawImage(beachImg, 0, 0, WIDTH, HEIGHT);
 
-
-
-            // draw Monkeys
-            foreach (player monkey in group)
-            {
-                monkey.Render(beach);
-            }
             // draw Trees
             foreach (Palm_Tree palm_tree in tree)
             {
                 palm_tree.Render(beach);
+            }
+            
+            // draw Monkeys
+            foreach (player monkey in group)
+            {
+                monkey.Render(beach);
             }
             beach.Render();
         }

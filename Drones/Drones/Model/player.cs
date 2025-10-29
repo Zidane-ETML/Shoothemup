@@ -9,8 +9,8 @@ namespace MonkeyGame
         private int x;
         private int y;
 
-        private int _x;                                 // Position en X
-        private int _y;                                 // Position en Y
+        private int speedx;                                 // Position en X
+        private int speedy;                                 // Position en Y
 
         private int velocityY = 0;
         private bool isJumping = false;
@@ -34,8 +34,8 @@ namespace MonkeyGame
         public int Y { get { return y;} }
         public void move(int movex, int movey)
         {
-            _x = movex;
-            _y = movey;
+            speedx = movex;
+            speedy = movey;
             
 
         }
@@ -49,17 +49,17 @@ namespace MonkeyGame
         }
         public void stopmove() 
         {
-            _x = 0;
-            _y = 0;
+            speedx = 0;
+            speedy = 0;
         }
 
 
-        // Cette méthode calcule le nouvel état dans lequel le drone se trouve après
+        // Cette méthode calcule le nouvel état dans lequel le joueur se trouve après
         // que 'interval' millisecondes se sont écoulées
         public void Update(int interval)
         {
-            x += _x;
-            y += _y;
+            x += speedx;
+            y += speedy;
             velocityY += 1;
             y += velocityY;
 
