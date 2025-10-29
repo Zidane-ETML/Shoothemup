@@ -28,4 +28,9 @@ JOURNAL DE TRAVAIL 08.10.2025
 J'ai vraiment de la difficulté à comprendre la mise en place de ces palmiers mais je pense pouvoir réussir avant les 80%.
 
 JOURNAL DE TRAVAIL 29.10.2025
-13h10 - 
+13h10 - 15h40 : Ajout des palmiers et de l'espace entre eux et et d'une hitbox(visuel pour l'instant) propre à chacun -2h30 DONE 
+J'ai enfin comprit comment mettre en place tout ça. Manque plus qu'à comprendre les collisions et le jeu sera prêt à temps.
+15h40 - 15h42 : Corriger l'orthographe de certaines phrases présentent dans le jdt -2min DONE
+15h42 - 15h52 : Reorganisation de la classe joueur car il y avait pas mal d'attribut et autres qui mettent à confusion ou étaient juste inutile -10min DONE
+15h52 - 16h35 : Faire en sorte que le joueur tombe du ciel au lieu qu'il n'apparaisse sur le sol(qui est censé tuer le joueur) -43min DONE
+Cela m'a prit du temps car je ne me suis pas rendu compte que plus la position Y est grande plus le joueur est en bas de l'écran.
