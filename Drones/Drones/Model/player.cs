@@ -69,7 +69,7 @@ namespace MonkeyGame
                 velocityY = 0;
                 isJumping = false ;
             }
-            Hitbox = new Rectangle(x, y, Resources.player.Width/10, Resources.player.Height/10);
+            Hitbox = new Rectangle(x, y, Width, Height);
         }
 
     }
