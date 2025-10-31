@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MonkeyGame.View
 {
-    internal class Gorilla
+    public partial class Gorilla
     {
     }
 }

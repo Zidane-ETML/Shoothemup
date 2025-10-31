@@ -6,17 +6,17 @@ namespace MonkeyGame
 {
     public partial class player
     {
-        private int _x;
-        private int _y;
+        private int _x;  // Position en X
+        private int _y;  // Position en Y
 
-        private int speedx;                                 // Position en X
-        private int speedy;                                 // Position en Y
+        private int speedx;                                 
+        private int speedy;                                 
 
         private int velocityY = 0;
         private bool isJumping = false;
-        public int GroundY { get; private set; }
-        public int Width { get; private set; }
-        public int Height { get; private set; }
+        public int GroundY { get; set; }
+        public int Width { get; set; }
+        public int Height { get; set; }
         public int X { get { return _x; } }
         public int Y { get { return _y; } }
         public Rectangle Hitbox { get;set; }

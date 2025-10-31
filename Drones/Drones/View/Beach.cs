@@ -96,9 +96,19 @@ namespace MonkeyGame
         // Calcul du nouvel état après que 'interval' millisecondes se sont écoulées
         private void Update(int interval)
         {
-            foreach (player drone in group)
+            foreach (player monkey in group)
             {
-                drone.Update(interval);
+                monkey.Update(interval);
+                foreach (Palm_Tree tree in tree)
+                {
+                    if (monkey.Hitbox.IntersectsWith(tree.Hitbox))
+                    {
+                        monkey.GroundY = monkey.Hitbox.Y;
+                    }
+                    else {
+                        monkey.GroundY = 600;
+                    }
+                }
             }
         }
 

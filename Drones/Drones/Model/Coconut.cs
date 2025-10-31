@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MonkeyGame.Model
 {
-    public partial class Gorilla
+    public partial class Coconut
     {
     }
 }
