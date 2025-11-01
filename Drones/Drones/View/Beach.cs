@@ -99,15 +99,22 @@ namespace MonkeyGame
             foreach (player monkey in group)
             {
                 monkey.Update(interval);
+                int newGround = 600;
+
                 foreach (Palm_Tree tree in tree)
                 {
                     if (monkey.Hitbox.IntersectsWith(tree.Hitbox))
                     {
-                        monkey.GroundY = monkey.Hitbox.Y;
+                        monkey.CheckOnpalm_tree(tree, newGround);
                     }
-                    else {
-                        monkey.GroundY = 600;
-                    }
+                }
+                if (!monkey.onPalmTree)
+                {
+                    monkey.GroundY = 600;
+                }
+                else
+                {
+                    monkey.GroundY = newGround;
                 }
             }
         }

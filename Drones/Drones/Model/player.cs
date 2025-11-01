@@ -17,6 +17,7 @@ namespace MonkeyGame
         public int GroundY { get; set; }
         public int Width { get; set; }
         public int Height { get; set; }
+        public bool onPalmTree = false;
         public int X { get { return _x; } }
         public int Y { get { return _y; } }
         public Rectangle Hitbox { get;set; }
@@ -71,6 +72,13 @@ namespace MonkeyGame
             }
             Hitbox = new Rectangle(_x, _y, Width, Height);
         }
-
+        public void CheckOnpalm_tree(Palm_Tree tree, int newground)
+        {
+            if (Y + Height <= tree.Hitbox.Y + 10)
+            {
+                newground = tree.Hitbox.Y - Height;
+                onPalmTree = true;
+            }
+        }
     }
 }
