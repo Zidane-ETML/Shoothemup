@@ -45,3 +45,14 @@ Les valeurs possibles du résultat sont: LA (Largement Acquis), A (Acquis), I (I
 | Ecologie (gitignore)       | A        |                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | Comportement collectif     | A        |                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | Comportement individuel    | A        |                                                                                                                                                                                                                                                                                                                                                                                                                 |
+
+## Final
+
+livraison, impeccable
+
+je ne vais malheureusement pas pouvoir valider votre projet pour les raisons suivantes :
+
+  - le rapport devait contenir (ou faire référence à) des User Story faisant référence à une ou des maquettes. Il y a bien une maquette dans le rapport, mais les Story au format demandé avec des tests d'acceptance ne sont pas présentes.
+  - L'état d'avancement du code est malheureusement très insuffisant.
+
+Je vous encourage à réfléchir à vos méthodes de travail. Vous avez buté sur une difficulté que la majeure partie de vos camarades a réussi à surmonter. Pendant ce temps vous avez essayé de résoudre le problème seul ou avec l'aide de l'IA. Comme vous le relevez dans votre conclusion, cela n'a pas bien fonctionné. J'espère que vous tirerez les leçons de cet échec et que vous aurez recours à l'avenir à d'autres ressources plus efficaces: vos collègues de travail (ce qui inclut votre enseignant). 
